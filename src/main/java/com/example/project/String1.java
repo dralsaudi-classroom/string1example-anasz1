@@ -29,26 +29,26 @@ public class String1 {
         for(int i = 0; i < s.length(); i++)
             append(s.getChar(i));
     }
-        public boolean equal(String1 s) {
-	    if (str().length == s.length){
-            for(i == 0 ; i <= s.length ; i++){
-                if(str[i] != s[i] ){
-                    retrun false ;
+    public boolean equal(String1 s) {
+	    if (str.length == s.length()){
+            for( int i = 0 ; i <= s.length() ; i++){
+                if(str[i] != s.getChar(i)){
+                    return false ;
                 }
 
             }
 
         } else {
-            retrun false ;
+            return false ;
         }
-        retrun true ; 
+        return true ; 
     }
     public void reverse() {
-        String temp = str[0];
-        for( i = 0 , j = str().length -1  ; i < str().length ; i++ , j--) {
+        char temp = str[0];
+        for( int i = 0 , j = str.length -1  ; i < str.length ; i++ , j--) {
             str[i] = str[j] ;
         }
-        str[str().length-1] = temp ; 
+        str[str.length-1] = temp ; 
     }
-}
+
 }
