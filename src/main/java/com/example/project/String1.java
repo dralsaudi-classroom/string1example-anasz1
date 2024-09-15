@@ -30,9 +30,26 @@ public class String1 {
             append(s.getChar(i));
     }
     public boolean equal(String1 s) {
-        throw new UnsupportedOperationException("equal() function is not supported yet.");
+        if (this.length() != s.length()) {
+            return false;
+        }
+        for (int i = 0; i < this.length(); i++) {
+            if (this.str[i] != s.getChar(i)) {
+                return false;
+            }
+        }
+        return true;
     }
+
     public void reverse() {
-        throw new UnsupportedOperationException("reverse() function is not supported yet.");
+        int n = this.length();
+        for (int i = 0; i < n / 2; i++) {
+            char temp = str[i];
+            str[i] = str[n - i - 1];
+            str[n - i - 1] = temp;
+        }
     }
+
 }
+
+
